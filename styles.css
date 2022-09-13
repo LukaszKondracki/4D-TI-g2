@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+:root {
+    --pad: 10px;
+    --bg: rgb(39, 35, 41);
+    --pane: rgb(67, 61, 68);
+    --fg: aliceblue;
+    --acc: rgb(18, 228, 18);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 40px 1fr 70px;
+
+    min-height: 100vh;
+    margin: 0;
+
+    gap: var(--pad);
+
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+#nav {
+    grid-row: 1;
+    grid-column: 1 / 4;
+    /* background-color: red; */
+    background-color: var(--pane);
+}
+
+nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item:hover,
+.side-nav-item:hover {
+    background-color: var(--acc);
+}
+
+.nav-item,
+.side-nav-item {
+    transition: background-color 200ms ease-in-out;
+}
+
+.nav-list {
+    display: flex;
+    height: 100%;
+    align-items: stretch;
+}
+
+.nav-list > .nav-item {
+    display: flex;
+    align-items: center;
+    padding: var(--pad);
+    cursor: pointer;
+}
+
+.side-nav-list > .side-nav-item {
+    padding: calc(var(--pad) / 2);
+    cursor: pointer;
+}
+
+#sidepanel {
+    grid-row: 2;
+    grid-column: 3;
+    /* background-color: orange; */
+    background-color: var(--pane);
+    padding: var(--pad);
+    margin-right: var(--pad);
+}
+
+@media screen and (max-width: 500px) {
+    #sidepanel {
+        margin-right: 0;
+    }
+    #footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#content {
+    grid-row: 2;
+    grid-column: 2;
+    /* background-color: purple; */
+    background-color: var(--pane);
+    padding: calc(var(--pad) * 3);
+}
+
+#content > article {
+    text-align: justify;
+    line-height: 130%;
+}
+
+h1 {
+    margin: 0;
+}
+
+#footer {
+    grid-row: 3;
+    grid-column: 1 / 4;
+    /* background-color: blue; */
+    background-color: var(--pane);
+    display: flex;
+    justify-content: space-around;
+    padding: var(--pad);
+}
+
+#footer > * {
+    height: 100%;
+    align-items: center;
+}
