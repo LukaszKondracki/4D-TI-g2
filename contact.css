@@ -1,0 +1,34 @@
+#form {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: auto;
+    align-self: baseline;
+    gap: var(--pad);
+}
+
+.form-input {
+    background-color: var(--pane);
+    border: none;
+    color: var(--fg);
+    padding: var(--pad);
+}
+
+.form-input:focus {
+    outline: 3px solid var(--acc);
+}
+
+input[type="submit"] {
+    background-color: var(--pane);
+    padding: var(--pad);
+    color: var(--fg);
+    border: none;
+    grid-column: 2;
+}
+
+input[type="submit"]:hover {
+    outline: 3px solid var(--acc);
+    color: var(--acc);
+    cursor: pointer;
+}
