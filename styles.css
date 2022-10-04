@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
-:root {
+html {
     --pad: 10px;
     --bg: rgb(39, 35, 41);
     --pane: rgb(67, 61, 68);
     --fg: aliceblue;
     --acc: rgb(18, 228, 18);
+}
+
+html.light {
+    --bg: rgb(220, 199, 231);
+    --pane: rgb(205, 143, 216);
+    --fg: rgb(28, 29, 29);
+    --acc: rgb(224, 21, 89);
 }
 
 body {
@@ -121,4 +128,14 @@ h1 {
 #footer > * {
     height: 100%;
     align-items: center;
+}
+
+#theme {
+    position: fixed;
+    right: var(--pad);
+    bottom: var(--pad);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
 }
