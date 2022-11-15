@@ -11,25 +11,25 @@
 </head>
 <body>
 
-    <form action="" method="GET" id="form">
+    <form action="" method="POST" id="form">
 
-        <label for="text">Name</label>
-        <input id="text" type="text" name="name" class="form-input" required minlength="2" pattern="[A-Z][a-zA-Z\-]+">
+        <ul id="error-container"></ul>
+
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" class="form-input">
 
         <label for="email">Email</label>
-        <input id="email" type="email" name="email" class="form-input" required>
+        <input id="email" type="email" name="email" class="form-input">
         
         <label for="phone">Phone</label>
-        <input id="phone" type="tel" name="phone" class="form-input" required minlength="7" pattern="[0-9]+">
+        <input id="phone" type="tel" name="phone" class="form-input">
 
         <label for="body">Body</label>
         <textarea 
             id="body" 
             name="body" 
             class="form-input" 
-            cols="30" rows="10" 
-            required 
-            minlength="300" maxlength="2000"></textarea>
+            cols="30" rows="10"></textarea>
 
         <label for="agree">Agree to data processing</label>
         <input id="agree" type="checkbox" name="agree" class="form-input">
@@ -37,7 +37,10 @@
         <input type="submit" value="Wyślij ten formularz">
     </form>
     
+    <script src="contact.js"></script>
+
 </body>
+
 </html>
 
 <!-- 

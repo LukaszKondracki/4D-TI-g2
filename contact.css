@@ -13,6 +13,12 @@
     border: none;
     color: var(--fg);
     padding: var(--pad);
+    margin: 0;
+}
+
+.form-input.error {
+    background-color: rgba(255, 0, 0, 0.25);
+    outline: 3px solid red;
 }
 
 .form-input:focus {
@@ -31,4 +37,27 @@ input[type="submit"]:hover {
     outline: 3px solid var(--acc);
     color: var(--acc);
     cursor: pointer;
+}
+
+#error-container {
+    grid-column: 2;
+    padding: 0;
+    margin: 0;
+    height: 0;
+}
+
+#error-container.active {
+    height: auto;
+    border: 1px solid red;
+    color: red;
+    padding: var(--pad);
+    padding-left: calc(var(--pad) * 3);
+}
+
+span.error {
+    outline: 3px solid red;
+    color: red;
+    grid-column: 2;
+    margin-top: calc(var(--pad) * -1 + 3px);
+    padding: var(--pad);
 }
