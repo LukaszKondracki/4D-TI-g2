@@ -10,22 +10,9 @@
 </head>
 <body>
     
-    <nav id="nav">
-        <ul class="nav-list">
-            <li class="nav-item">
-                <img src="" alt="">
-            </li>
-            <li class="nav-item">
-                Home
-            </li>
-            <li class="nav-item">
-                Contact
-            </li>
-            <li class="nav-item">
-                Guestbook
-            </li>
-        </ul>
-    </nav>
+    <?php
+        require('includes/header.php');
+    ?>
 
     <div id="sidepanel">
         <nav class="side-nav">
@@ -53,11 +40,9 @@
 
     </main>
 
-    <footer id="footer">
-        <div class="copyright">Copyright &copy; 2022-2022</div>
-        <div class="about">Moja strona internetowa</div>
-        <div class="about">example@example.com</div>
-    </footer>
+    <?php
+        require('includes/footer.php');
+    ?>
 
     <button id="theme">🌞</button>
 
